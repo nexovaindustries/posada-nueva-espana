@@ -1,0 +1,1178 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title data-i18n="meta.title">Posada Nueva España · Arequipa · Casona Colonial 1810</title>
+  <meta name="description" data-i18n="meta.desc" data-i18n-attr="content" content="Una casona de 1810 en el tradicional barrio de Yanahuara, Arequipa. Habitaciones coloniales y modernas, a 10 minutos de la Plaza de Armas, con vista a los volcanes Misti, Chachani y Pichu-Pichu." />
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <meta name="theme-color" content="#B0573E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* ----------  PALETA CÁLIDA ANDINA  ---------- */
+    :root{
+      --sillar:        #F4ECDD;
+      --cream:         #FAF5EB;
+      --paper:         #FBF8F2;
+      --ochre:         #C68B59;
+      --terracotta:    #B0573E;
+      --terracotta-dk: #8A4029;
+      --ink:           #2B221C;
+      --ink-soft:      #5C4F44;
+      --stone:         #A7937C;
+      --line:          #E5DAC6;
+      --gold:          #B98A4A;
+      --shadow:        0 30px 80px -30px rgba(60,40,20,.35);
+      --radius:        4px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Inter',sans-serif;font-weight:300;font-size:16px;line-height:1.65;
+      color:var(--ink);background:var(--cream);
+      -webkit-font-smoothing:antialiased;overflow-x:hidden;
+    }
+    img{max-width:100%;display:block}
+    a{color:inherit;text-decoration:none}
+
+    .serif{font-family:'Cormorant Garamond',serif;font-weight:500;letter-spacing:.01em}
+    h1,h2,h3,h4{font-family:'Cormorant Garamond',serif;font-weight:500;line-height:1.1;letter-spacing:.005em}
+    h1{font-size:clamp(2.6rem,5.5vw,5rem)}
+    h2{font-size:clamp(2rem,3.6vw,3.4rem)}
+    h3{font-size:clamp(1.4rem,2vw,1.9rem)}
+    .eyebrow{
+      font-family:'Inter',sans-serif;font-size:.72rem;letter-spacing:.32em;
+      text-transform:uppercase;color:var(--terracotta);font-weight:500;
+    }
+    p{color:var(--ink-soft)}
+
+    .container{max-width:1240px;margin:0 auto;padding:0 32px}
+    section{padding:120px 0;position:relative}
+    @media(max-width:760px){section{padding:80px 0}}
+
+    .ornament{display:flex;align-items:center;gap:14px;color:var(--ochre);margin:18px 0 26px}
+    .ornament::before,.ornament::after{content:"";flex:0 0 36px;height:1px;background:var(--ochre);opacity:.7}
+    .ornament svg{width:14px;height:14px}
+
+    /* NAV */
+    .nav{position:fixed;top:0;left:0;right:0;z-index:50;padding:18px 0;transition:all .35s ease;background:transparent}
+    .nav.scrolled{background:rgba(250,245,235,.95);backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);padding:12px 0}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between}
+    .brand{display:flex;align-items:center;gap:12px;color:#fff;transition:color .3s}
+    .nav.scrolled .brand{color:var(--ink)}
+    .brand-mark{width:42px;height:42px;border-radius:50%;border:1px solid currentColor;display:grid;place-items:center;font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-style:italic}
+    .brand-text{line-height:1.1}
+    .brand-text .top{font-family:'Cormorant Garamond',serif;font-size:1.35rem;letter-spacing:.04em}
+    .brand-text .sub{font-size:.66rem;letter-spacing:.38em;text-transform:uppercase;opacity:.75}
+
+    .nav-links{display:flex;align-items:center;gap:34px}
+    .nav-links a{color:#fff;font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;font-weight:400;transition:color .25s;position:relative}
+    .nav.scrolled .nav-links a{color:var(--ink)}
+    .nav-links a:hover{color:var(--ochre)}
+    .nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--ochre);transition:width .3s}
+    .nav-links a:hover::after{width:100%}
+
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 28px;border-radius:var(--radius);font-size:.74rem;letter-spacing:.24em;text-transform:uppercase;font-weight:500;transition:all .3s ease;cursor:pointer;border:none;font-family:'Inter',sans-serif}
+    .btn-primary{background:var(--terracotta);color:#fff}
+    .btn-primary:hover{background:var(--terracotta-dk);transform:translateY(-1px);box-shadow:0 12px 24px -10px rgba(176,87,62,.55)}
+    .btn-ghost{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.6)}
+    .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+
+    .lang{display:flex;gap:10px;font-size:.7rem;letter-spacing:.2em;color:#fff;align-items:center}
+    .nav.scrolled .lang{color:var(--ink-soft)}
+    .lang button{background:none;border:none;color:inherit;cursor:pointer;font-size:inherit;letter-spacing:inherit;font-family:inherit;padding:0;transition:color .2s}
+    .lang button.active{color:var(--ochre);font-weight:500}
+    .lang button:hover{color:var(--ochre)}
+
+    .menu-btn{display:none;background:none;border:none;color:#fff;cursor:pointer;padding:8px}
+    .nav.scrolled .menu-btn{color:var(--ink)}
+    @media(max-width:980px){.nav-links{display:none}.menu-btn{display:block}}
+
+    /* HERO */
+    .hero{position:relative;min-height:100vh;display:flex;align-items:center;color:#fff;overflow:hidden}
+    .hero-bg{position:absolute;inset:0;z-index:-1;background:linear-gradient(180deg, rgba(35,25,18,.45) 0%, rgba(35,25,18,.25) 40%, rgba(35,25,18,.75) 100%), url('img/DSC_0086.jpg') center/cover}
+    .hero-content{position:relative;z-index:2;text-align:center;width:100%;padding-top:80px}
+    .hero .eyebrow{color:var(--sillar);opacity:.9}
+    .hero h1{margin:18px auto 14px;max-width:14ch;color:#fff;font-weight:400;letter-spacing:.005em}
+    .hero h1 em{font-style:italic;color:var(--ochre)}
+    .hero p{max-width:540px;margin:0 auto 38px;color:rgba(255,255,255,.85);font-size:1.05rem;font-weight:300}
+    .hero-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+
+    .scroll-cue{position:absolute;bottom:38px;left:50%;transform:translateX(-50%);color:rgba(255,255,255,.7);font-size:.65rem;letter-spacing:.4em;text-transform:uppercase;display:flex;flex-direction:column;align-items:center;gap:12px}
+    .scroll-cue::after{content:"";width:1px;height:46px;background:rgba(255,255,255,.5);animation:scrollLine 2s ease-in-out infinite}
+    @keyframes scrollLine{0%,100%{transform:scaleY(.4);transform-origin:top}50%{transform:scaleY(1);transform-origin:top}}
+
+    .hero-rating{position:absolute;bottom:38px;right:32px;display:flex;gap:22px;align-items:center;color:rgba(255,255,255,.85);font-size:.7rem;letter-spacing:.18em;text-transform:uppercase}
+    .hero-rating .stars{color:var(--gold);letter-spacing:.05em;font-size:.9rem}
+    @media(max-width:760px){.hero-rating{display:none}.scroll-cue{display:none}}
+
+    /* WELCOME */
+    .welcome{background:var(--cream)}
+    .welcome-grid{display:grid;grid-template-columns:1fr 1fr;gap:90px;align-items:center}
+    @media(max-width:880px){.welcome-grid{grid-template-columns:1fr;gap:50px}}
+    .welcome-img{position:relative;aspect-ratio:4/5;background:var(--sillar) url('img/DSC_0021.jpg') center/cover;border-radius:var(--radius);box-shadow:var(--shadow)}
+    .welcome-img::after{content:"1810";position:absolute;bottom:-20px;right:-20px;background:var(--terracotta);color:#fff;padding:18px 26px;font-size:.7rem;letter-spacing:.32em;font-weight:500;box-shadow:var(--shadow)}
+    .welcome h2{margin-bottom:24px}
+    .welcome h2 em{font-style:italic;color:var(--terracotta)}
+    .welcome p{margin-bottom:18px;font-size:1.02rem}
+    .welcome-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:42px;padding-top:42px;border-top:1px solid var(--line)}
+    .stat-num{font-family:'Cormorant Garamond',serif;font-size:2.4rem;color:var(--terracotta);line-height:1}
+    .stat-lbl{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px}
+
+    /* HISTORIA */
+    .historia{background:linear-gradient(180deg, rgba(244,236,221,0) 0%, var(--sillar) 30%, var(--sillar) 70%, rgba(244,236,221,0) 100%);position:relative}
+    .historia .container{position:relative;z-index:1}
+    .section-head{text-align:center;max-width:680px;margin:0 auto 80px}
+    .section-head .ornament{justify-content:center}
+    .section-head p{margin-top:18px}
+    .timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:30px;position:relative}
+    @media(max-width:880px){.timeline{grid-template-columns:1fr;gap:40px}}
+    .timeline::before{content:"";position:absolute;top:60px;left:8%;right:8%;height:1px;background:repeating-linear-gradient(90deg,var(--ochre) 0 6px,transparent 6px 14px)}
+    @media(max-width:880px){.timeline::before{display:none}}
+    .tl-item{position:relative;text-align:center;padding:0 12px}
+    .tl-dot{width:46px;height:46px;border-radius:50%;background:var(--cream);border:1px solid var(--ochre);display:grid;place-items:center;margin:0 auto 22px;font-family:'Cormorant Garamond',serif;color:var(--terracotta);font-size:1.2rem;position:relative;z-index:2}
+    .tl-era{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--terracotta);margin-bottom:10px}
+    .tl-item h3{margin-bottom:12px}
+    .tl-item p{font-size:.95rem}
+
+    /* HABITACIONES */
+    .rooms{background:var(--paper)}
+    .rooms-grid{display:grid;grid-template-columns:repeat(12,1fr);gap:30px}
+    .room{grid-column:span 4;background:#fff;border-radius:var(--radius);overflow:hidden;box-shadow:0 1px 0 var(--line),0 10px 30px -20px rgba(60,40,20,.2);transition:transform .4s ease, box-shadow .4s ease;display:flex;flex-direction:column}
+    .room:hover{transform:translateY(-6px);box-shadow:var(--shadow)}
+    .room.feature{grid-column:span 8;flex-direction:row}
+    .room.feature .room-img{flex:1.2;aspect-ratio:unset;min-height:380px}
+    .room.feature .room-body{flex:1}
+    @media(max-width:980px){
+      .room,.room.feature{grid-column:span 12;flex-direction:column}
+      .room.feature .room-img{min-height:300px}
+    }
+    .room-img{aspect-ratio:4/3;background:var(--sillar) center/cover;position:relative}
+    .room-tag{position:absolute;top:18px;left:18px;background:rgba(255,255,255,.92);color:var(--ink);padding:6px 14px;font-size:.65rem;letter-spacing:.26em;text-transform:uppercase;border-radius:2px}
+    .room-body{padding:32px;display:flex;flex-direction:column;gap:14px;flex:1}
+    .room h3{font-weight:500}
+    .room-meta{display:flex;gap:18px;font-size:.78rem;color:var(--ink-soft);align-items:center;flex-wrap:wrap}
+    .room-meta span{display:inline-flex;align-items:center;gap:6px}
+    .room-meta svg{width:14px;height:14px;color:var(--ochre)}
+    .room p{font-size:.94rem;flex:1}
+    .room-foot{display:flex;justify-content:space-between;align-items:center;padding-top:16px;border-top:1px solid var(--line);margin-top:6px}
+    .room-price{font-family:'Cormorant Garamond',serif;color:var(--terracotta);font-size:1.4rem}
+    .room-price small{font-size:.7rem;letter-spacing:.18em;color:var(--ink-soft);text-transform:uppercase;font-family:'Inter',sans-serif;margin-left:4px}
+    .room-link{font-size:.72rem;letter-spacing:.26em;text-transform:uppercase;color:var(--ink);border-bottom:1px solid var(--ink);padding-bottom:3px;transition:color .25s,border-color .25s;display:inline-flex;align-items:center;gap:6px;background:none;border-top:none;border-left:none;border-right:none;cursor:pointer;font-family:inherit;font-weight:400}
+    .room-link:hover{color:#25D366;border-color:#25D366}
+    .room-link svg{width:14px;height:14px}
+
+    /* SERVICIOS */
+    .servicios{background:linear-gradient(180deg,var(--paper) 0%,var(--cream) 100%)}
+    .servicios-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}
+    @media(max-width:880px){.servicios-grid{grid-template-columns:repeat(2,1fr)}}
+    .srv{background:#fff;padding:38px 26px;text-align:center;transition:background .3s}
+    .srv:hover{background:var(--sillar)}
+    .srv-icon{width:54px;height:54px;border-radius:50%;background:var(--sillar);display:grid;place-items:center;margin:0 auto 16px;color:var(--terracotta)}
+    .srv:hover .srv-icon{background:#fff}
+    .srv-icon svg{width:24px;height:24px}
+    .srv h4{font-size:1.1rem;margin-bottom:8px}
+    .srv p{font-size:.84rem;color:var(--ink-soft);line-height:1.5}
+
+    .idiomas{margin-top:50px;padding:30px 40px;background:#fff;border:1px solid var(--line);border-radius:var(--radius);display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+    .idiomas .label{font-size:.7rem;letter-spacing:.32em;text-transform:uppercase;color:var(--terracotta)}
+    .idiomas .langs{display:flex;gap:30px;font-family:'Cormorant Garamond',serif;font-size:1.4rem;color:var(--ink);flex-wrap:wrap}
+    .idiomas .langs span{position:relative;padding-right:30px}
+    .idiomas .langs span:not(:last-child)::after{content:"·";position:absolute;right:8px;color:var(--ochre)}
+
+    /* EXPERIENCIA */
+    .experiencia{background:linear-gradient(0deg, rgba(35,25,18,.78), rgba(35,25,18,.55)),url('img/DSC_0083.jpg') center/cover fixed;color:#fff;text-align:center}
+    .experiencia .eyebrow{color:var(--ochre)}
+    .experiencia h2{color:#fff;max-width:18ch;margin:18px auto}
+    .experiencia h2 em{font-style:italic;color:var(--ochre)}
+    .experiencia p{color:rgba(255,255,255,.85);max-width:620px;margin:0 auto 50px;font-size:1.05rem}
+    .vol-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:50px;max-width:900px;margin:0 auto}
+    @media(max-width:760px){.vol-grid{grid-template-columns:1fr;gap:30px}}
+    .vol h3{font-size:2.2rem;color:#fff;font-weight:400}
+    .vol h3 em{color:var(--ochre);font-style:italic}
+    .vol .h{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--ochre);margin-top:6px}
+    .vol p{margin-top:12px;font-size:.92rem;color:rgba(255,255,255,.75)}
+
+    /* GALLERY */
+    .gallery{background:var(--cream);padding:80px 0}
+    .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;gap:14px}
+    @media(max-width:880px){.gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px}}
+    .g{background:var(--sillar) center/cover;border-radius:2px;overflow:hidden;transition:transform .4s;cursor:pointer;position:relative}
+    .g:hover{transform:scale(1.02)}
+    .g::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(35,25,18,.5));opacity:0;transition:opacity .3s}
+    .g:hover::after{opacity:1}
+    .g.big{grid-column:span 2;grid-row:span 2}
+
+    /* CTA */
+    .cta{background:var(--terracotta);color:#fff;text-align:center;padding:130px 0;position:relative;overflow:hidden}
+    .cta::before,.cta::after{content:"";position:absolute;width:400px;height:400px;border:1px solid rgba(255,255,255,.12);border-radius:50%}
+    .cta::before{top:-200px;left:-100px}
+    .cta::after{bottom:-200px;right:-100px}
+    .cta .container{position:relative;z-index:1}
+    .cta .eyebrow{color:rgba(255,255,255,.7)}
+    .cta h2{color:#fff;max-width:18ch;margin:18px auto 14px;font-weight:400}
+    .cta h2 em{font-style:italic;color:#fae0c8}
+    .cta p{color:rgba(255,255,255,.85);max-width:540px;margin:0 auto 40px}
+    .cta-actions{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+    .cta .btn-primary{background:#fff;color:var(--terracotta)}
+    .cta .btn-primary:hover{background:var(--ink);color:#fff}
+    .cta .btn-ghost{color:#fff;border-color:rgba(255,255,255,.6)}
+    .btn-wa{background:#25D366;color:#fff;border:none}
+    .btn-wa:hover{background:#1FAE54;color:#fff}
+    .cta-partners{margin-top:60px;display:flex;justify-content:center;gap:50px;align-items:center;flex-wrap:wrap;opacity:.85}
+    .cta-partners span{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:rgba(255,255,255,.85);letter-spacing:.05em}
+
+    /* CONTACTO */
+    .contacto{background:var(--ink);color:var(--cream);padding:110px 0 60px}
+    .contacto-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:80px;align-items:start}
+    @media(max-width:880px){.contacto-grid{grid-template-columns:1fr;gap:50px}}
+    .contacto h2{color:#fff;margin-bottom:18px}
+    .contacto h2 em{font-style:italic;color:var(--ochre)}
+    .contacto p{color:rgba(250,245,235,.7)}
+    .contact-block{margin-top:30px}
+    .contact-block .lbl{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--ochre);margin-bottom:8px}
+    .contact-block .val{font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:#fff;line-height:1.5}
+    .contact-block .val a{display:block;transition:color .25s}
+    .contact-block .val a:hover{color:var(--ochre)}
+
+    .map-frame{aspect-ratio:4/3;background:var(--ink-soft);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow)}
+    .map-frame iframe{width:100%;height:100%;border:0;filter:grayscale(.3) contrast(1.1)}
+
+    footer{background:var(--ink);color:rgba(250,245,235,.55);padding:36px 0;border-top:1px solid rgba(255,255,255,.08);font-size:.78rem}
+    footer .container{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+    .social{display:flex;gap:14px}
+    .social a{width:36px;height:36px;border-radius:50%;border:1px solid rgba(255,255,255,.18);display:grid;place-items:center;color:rgba(250,245,235,.7);transition:all .25s}
+    .social a:hover{background:var(--ochre);border-color:var(--ochre);color:#fff}
+    .social svg{width:15px;height:15px}
+
+    .reveal{opacity:0;transform:translateY(24px);transition:opacity .9s ease,transform .9s ease}
+    .reveal.in{opacity:1;transform:none}
+
+    /* ========== LOADER ========== */
+    body.loading{overflow:hidden}
+    .loader{
+      position:fixed;inset:0;z-index:100;
+      background:
+        radial-gradient(ellipse at center, var(--cream) 0%, var(--sillar) 100%);
+      display:grid;place-items:center;
+      transition:opacity .9s ease, visibility .9s ease;
+    }
+    .loader.hidden{opacity:0;visibility:hidden;pointer-events:none}
+
+    /* decorative texture — subtle dots like sillar grain */
+    .loader::before{
+      content:"";position:absolute;inset:0;opacity:.35;
+      background-image:
+        radial-gradient(circle at 20% 30%, rgba(176,87,62,.06) 0, transparent 50%),
+        radial-gradient(circle at 80% 70%, rgba(198,139,89,.08) 0, transparent 50%);
+      pointer-events:none;
+    }
+
+    .loader-inner{
+      position:relative;text-align:center;display:flex;flex-direction:column;align-items:center;gap:28px;
+      animation:loaderFadeIn .8s ease both;
+    }
+    @keyframes loaderFadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+
+    /* Animated monogram with traced circle */
+    .loader-mark{
+      position:relative;width:120px;height:120px;
+    }
+    .loader-mark svg{
+      position:absolute;inset:0;transform:rotate(-90deg);
+    }
+    .loader-mark .ring-bg{
+      fill:none;stroke:var(--line);stroke-width:1.2;
+    }
+    .loader-mark .ring-fg{
+      fill:none;stroke:var(--terracotta);stroke-width:1.5;stroke-linecap:round;
+      stroke-dasharray:340;stroke-dashoffset:340;
+      animation:traceRing 2.2s cubic-bezier(.65,.05,.36,1) infinite;
+    }
+    @keyframes traceRing{
+      0%{stroke-dashoffset:340}
+      50%{stroke-dashoffset:60}
+      100%{stroke-dashoffset:-340}
+    }
+    .loader-mark .mono{
+      position:absolute;inset:0;display:grid;place-items:center;
+      font-family:'Cormorant Garamond',serif;font-style:italic;
+      font-size:3.6rem;color:var(--terracotta);font-weight:400;
+      animation:monoBreathe 2.4s ease-in-out infinite;
+    }
+    @keyframes monoBreathe{
+      0%,100%{transform:scale(1);opacity:.92}
+      50%{transform:scale(1.06);opacity:1}
+    }
+    .loader-mark .petals{
+      position:absolute;inset:-10px;pointer-events:none;
+    }
+    .loader-mark .petal{
+      position:absolute;width:6px;height:6px;border-radius:50%;
+      background:var(--ochre);opacity:0;
+      animation:petalOrbit 2.6s linear infinite;
+    }
+    .loader-mark .petal:nth-child(1){animation-delay:0s}
+    .loader-mark .petal:nth-child(2){animation-delay:.65s}
+    .loader-mark .petal:nth-child(3){animation-delay:1.3s}
+    .loader-mark .petal:nth-child(4){animation-delay:1.95s}
+    @keyframes petalOrbit{
+      0%{transform:rotate(0deg) translateX(72px);opacity:0}
+      15%{opacity:.85}
+      85%{opacity:.85}
+      100%{transform:rotate(360deg) translateX(72px);opacity:0}
+    }
+
+    .loader-name{
+      font-family:'Cormorant Garamond',serif;
+      font-size:1.6rem;letter-spacing:.18em;
+      color:var(--ink);font-weight:400;
+      animation:slideUp .9s .25s ease both;
+    }
+    .loader-sub{
+      font-size:.7rem;letter-spacing:.42em;text-transform:uppercase;
+      color:var(--terracotta);font-weight:500;
+      animation:slideUp .9s .45s ease both;
+    }
+    @keyframes slideUp{
+      from{opacity:0;transform:translateY(10px)}
+      to{opacity:1;transform:none}
+    }
+
+    /* Ornamental line that fills */
+    .loader-line{
+      width:160px;height:1px;background:var(--line);position:relative;overflow:hidden;
+      margin-top:6px;animation:slideUp .9s .6s ease both;
+    }
+    .loader-line::after{
+      content:"";position:absolute;left:0;top:0;bottom:0;width:40%;
+      background:linear-gradient(90deg,transparent,var(--terracotta),transparent);
+      animation:lineSweep 1.8s ease-in-out infinite;
+    }
+    @keyframes lineSweep{
+      0%{left:-40%}
+      100%{left:100%}
+    }
+
+    .loader-tag{
+      font-size:.62rem;letter-spacing:.3em;text-transform:uppercase;
+      color:var(--ink-soft);opacity:.7;margin-top:10px;
+      animation:slideUp .9s .8s ease both;
+    }
+
+    /* Floating WhatsApp button */
+    .wa-float{
+      position:fixed;bottom:24px;right:24px;z-index:40;
+      width:60px;height:60px;border-radius:50%;background:#25D366;color:#fff;
+      display:grid;place-items:center;box-shadow:0 10px 30px -8px rgba(37,211,102,.55);
+      transition:transform .25s, box-shadow .25s;
+    }
+    .wa-float:hover{transform:scale(1.08);box-shadow:0 14px 36px -8px rgba(37,211,102,.7)}
+    .wa-float svg{width:30px;height:30px}
+  </style>
+</head>
+<body class="loading">
+
+  <!-- ===========  LOADER  =========== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader-inner">
+      <div class="loader-mark">
+        <svg viewBox="0 0 120 120">
+          <circle class="ring-bg" cx="60" cy="60" r="54"/>
+          <circle class="ring-fg" cx="60" cy="60" r="54"/>
+        </svg>
+        <div class="mono">N</div>
+        <div class="petals">
+          <span class="petal"></span>
+          <span class="petal"></span>
+          <span class="petal"></span>
+          <span class="petal"></span>
+        </div>
+      </div>
+      <div>
+        <div class="loader-name">Posada Nueva España</div>
+        <div class="loader-sub" style="margin-top:8px">Arequipa · Desde 1810</div>
+      </div>
+      <div class="loader-line"></div>
+      <div class="loader-tag" id="loaderTag">Bienvenidos</div>
+    </div>
+  </div>
+
+  <header class="nav" id="nav">
+    <div class="container nav-inner">
+      <a href="#" class="brand">
+        <span class="brand-mark">N</span>
+        <span class="brand-text">
+          <div class="top">Posada Nueva España</div>
+          <div class="sub" data-i18n="brand.sub">Arequipa · Desde 1810</div>
+        </span>
+      </a>
+      <nav class="nav-links">
+        <a href="#casona"        data-i18n="nav.casona">La Casona</a>
+        <a href="#historia"      data-i18n="nav.historia">Historia</a>
+        <a href="#habitaciones"  data-i18n="nav.habitaciones">Habitaciones</a>
+        <a href="#servicios"     data-i18n="nav.servicios">Servicios</a>
+        <a href="#ubicacion"     data-i18n="nav.ubicacion">Ubicación</a>
+      </nav>
+      <div style="display:flex;align-items:center;gap:24px">
+        <div class="lang" id="langSwitcher">
+          <button data-lang="es" class="active">ES</button><span>·</span>
+          <button data-lang="en">EN</button><span>·</span>
+          <button data-lang="fr">FR</button>
+        </div>
+        <a href="#reservar" class="btn btn-primary" data-i18n="nav.reservar">Reservar</a>
+        <button class="menu-btn" aria-label="Menu">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero" id="inicio">
+    <div class="hero-bg"></div>
+    <div class="container hero-content">
+      <div class="eyebrow" data-i18n="hero.eyebrow">Casona Colonial · Yanahuara</div>
+      <h1 data-i18n="hero.h1" data-i18n-html="true">Donde la <em>historia</em><br/>habita en cada piedra</h1>
+      <p data-i18n="hero.p">Una casona de 1810 restaurada con alma, en el barrio más auténtico de Arequipa, frente a los volcanes Misti, Chachani y Pichu-Pichu.</p>
+      <div class="hero-actions">
+        <a href="#reservar" class="btn btn-primary" data-i18n="hero.cta1">Reservar estancia</a>
+        <a href="#casona" class="btn btn-ghost" data-i18n="hero.cta2">Descubrir la casona</a>
+      </div>
+    </div>
+    <div class="scroll-cue" data-i18n="hero.scroll">Descubre</div>
+    <div class="hero-rating">
+      <div><div class="stars">★★★★★</div><div>Tripadvisor · 4.7</div></div>
+      <div><div class="stars">★★★★½</div><div>Booking · 8.9</div></div>
+    </div>
+  </section>
+
+  <!-- WELCOME -->
+  <section class="welcome" id="casona">
+    <div class="container">
+      <div class="welcome-grid">
+        <div class="welcome-img reveal" aria-hidden="true"></div>
+        <div class="reveal">
+          <div class="eyebrow" data-i18n="welcome.eyebrow">Bienvenidos</div>
+          <h2 data-i18n="welcome.h2" data-i18n-html="true">Una casa de 1810, una <em>experiencia</em> que no termina.</h2>
+          <div class="ornament"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="3"/></svg></div>
+          <p data-i18n="welcome.p1">Posada Nueva España está ubicada en el tradicional barrio de Yanahuara, a la margen izquierda del río Chili. Calles angostas, fachadas de sillar y macetas que adornan cada esquina componen el paisaje que rodea nuestra casona.</p>
+          <p data-i18n="welcome.p2">Construida en 1810, conserva su arquitectura colonial original, con habitaciones auténticas de la época junto a otras intervenidas con confort contemporáneo. Estamos a 10 minutos a pie de la Plaza de Armas — el trayecto se hace acompañado por la silueta de tres volcanes.</p>
+          <div class="welcome-stats">
+            <div><div class="stat-num">1810</div><div class="stat-lbl" data-i18n="welcome.stat1">Año de fundación</div></div>
+            <div><div class="stat-num">20</div><div class="stat-lbl" data-i18n="welcome.stat2">Habitaciones</div></div>
+            <div><div class="stat-num">10'</div><div class="stat-lbl" data-i18n="welcome.stat3">A la Plaza de Armas</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HISTORIA -->
+  <section class="historia" id="historia">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-i18n="hist.eyebrow">Nuestra Historia</div>
+        <h2 data-i18n="hist.h2">Dos siglos de vida arequipeña</h2>
+        <div class="ornament"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="3"/></svg></div>
+        <p data-i18n="hist.p">De casa de campo a tambo, de tambo a hogar para viajeros del mundo. La casona ha cambiado de oficio, pero nunca de carácter.</p>
+      </div>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <div class="tl-dot">I</div>
+          <div class="tl-era" data-i18n="hist.era1">Siglo XIX</div>
+          <h3 data-i18n="hist.title1">Casa de campo</h3>
+          <p data-i18n="hist.text1">Sobre el camino de herradura hacia Puno y el Colca, la casona era una propiedad con huerta y chacras, parada obligatoria de quienes cruzaban la región.</p>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot">II</div>
+          <div class="tl-era" data-i18n="hist.era2">Fines del Siglo XIX</div>
+          <h3 data-i18n="hist.title2">Tambo de lana</h3>
+          <p data-i18n="hist.text2">Aquí descansaban llamas y alpacas que traían lana desde el Valle del Colca y Puno para su selección y venta — un cruce de caminos y oficios.</p>
+        </div>
+        <div class="tl-item reveal">
+          <div class="tl-dot">III</div>
+          <div class="tl-era" data-i18n="hist.era3">Siglo XX–XXI</div>
+          <h3 data-i18n="hist.title3">Posada restaurada</h3>
+          <p data-i18n="hist.text3">En los años 90 se recupera la casona y se pone en valor su arquitectura tradicional. Hoy acoge viajeros que buscan la Arequipa auténtica.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HABITACIONES -->
+  <section class="rooms" id="habitaciones">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-i18n="rooms.eyebrow">Habitaciones</div>
+        <h2 data-i18n="rooms.h2" data-i18n-html="true">Coloniales o modernas — <em style="font-style:italic;color:var(--terracotta)">tú eliges</em></h2>
+        <div class="ornament"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="3"/></svg></div>
+        <p data-i18n="rooms.p">Veinte habitaciones distribuidas en una casona de dos plantas. Algunas conservan los muros de sillar originales, otras combinan piedra antigua con líneas contemporáneas.</p>
+      </div>
+
+      <div class="rooms-grid">
+
+        <article class="room feature reveal" data-room="matrimonial">
+          <div class="room-img" style="background-image:url('img/DSC_0078.jpg')">
+            <span class="room-tag" data-i18n="rooms.tag.popular">Más solicitada</span>
+          </div>
+          <div class="room-body">
+            <h3 data-i18n="rooms.r1.name">Matrimonial con balcón</h3>
+            <div class="room-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 18v-3a3 3 0 013-3h12a3 3 0 013 3v3M3 18h18M6 12V8a2 2 0 012-2h8a2 2 0 012 2v4"/></svg><span data-i18n="rooms.r1.m1">1 cama queen</span></span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span data-i18n="rooms.r1.m2">Balcón / terraza</span></span>
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12.55a11 11 0 0114 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01"/></svg> Wi-Fi</span>
+            </div>
+            <p data-i18n="rooms.r1.desc">Habitación con una cama, perfecta para parejas que buscan sentirse como en casa. Disponible con terraza o balcón sobre las calles empedradas de Antiquilla. Baño privado y agua caliente 24 horas.</p>
+            <div class="room-foot">
+              <div class="room-price">S/. 220 <small data-i18n="rooms.night">/ noche</small></div>
+              <a class="room-link reservar-btn" data-room-key="r1">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.4-1.4c1.4.7 2.9 1.1 4.6 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>
+                <span data-i18n="rooms.book">Reservar</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="room reveal" data-room="simple">
+          <div class="room-img" style="background-image:url('img/DSC_0069.jpg')">
+            <span class="room-tag" data-i18n="rooms.tag.colonial">Colonial</span>
+          </div>
+          <div class="room-body">
+            <h3 data-i18n="rooms.r2.name">Habitación simple</h3>
+            <div class="room-meta">
+              <span data-i18n="rooms.r2.m1">1 cama</span>
+              <span data-i18n="rooms.r2.m2">Baño privado</span>
+              <span>Wi-Fi</span>
+            </div>
+            <p data-i18n="rooms.r2.desc">Tranquila, perfecta para descansar. Ambiente colonial con TV cable, agua caliente 24h y conexión inalámbrica.</p>
+            <div class="room-foot">
+              <div class="room-price">S/. 150 <small data-i18n="rooms.night">/ noche</small></div>
+              <a class="room-link reservar-btn" data-room-key="r2">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.4-1.4c1.4.7 2.9 1.1 4.6 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>
+                <span data-i18n="rooms.book">Reservar</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="room reveal" data-room="doble">
+          <div class="room-img" style="background-image:url('img/DSC_0108.jpg')">
+            <span class="room-tag" data-i18n="rooms.tag.double">Doble</span>
+          </div>
+          <div class="room-body">
+            <h3 data-i18n="rooms.r3.name">Doble · twin</h3>
+            <div class="room-meta">
+              <span data-i18n="rooms.r3.m1">2 camas</span>
+              <span data-i18n="rooms.r3.m2">Baño amplio</span>
+              <span data-i18n="rooms.r3.m3">TV cable</span>
+            </div>
+            <p data-i18n="rooms.r3.desc">Ideal para descanso por trabajo o placer. Disponible en versión colonial o moderna, según tu preferencia.</p>
+            <div class="room-foot">
+              <div class="room-price">S/. 190 <small data-i18n="rooms.night">/ noche</small></div>
+              <a class="room-link reservar-btn" data-room-key="r3">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.4-1.4c1.4.7 2.9 1.1 4.6 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>
+                <span data-i18n="rooms.book">Reservar</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="room reveal" data-room="triple">
+          <div class="room-img" style="background-image:url('img/DSC_0044.jpg')">
+            <span class="room-tag" data-i18n="rooms.tag.family">Familia</span>
+          </div>
+          <div class="room-body">
+            <h3 data-i18n="rooms.r4.name">Triple con balcón</h3>
+            <div class="room-meta">
+              <span data-i18n="rooms.r4.m1">3 camas</span>
+              <span data-i18n="rooms.r4.m2">Balcón</span>
+              <span data-i18n="rooms.r4.m3">Vista al barrio</span>
+            </div>
+            <p data-i18n="rooms.r4.desc">Para amigos o familia. Balcón sobre una calle del barrio de Antiquilla, ofreciendo una vista diferente y entrañable de la casona.</p>
+            <div class="room-foot">
+              <div class="room-price">S/. 260 <small data-i18n="rooms.night">/ noche</small></div>
+              <a class="room-link reservar-btn" data-room-key="r4">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.4-1.4c1.4.7 2.9 1.1 4.6 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>
+                <span data-i18n="rooms.book">Reservar</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+        <article class="room feature reveal" style="flex-direction:row-reverse" data-room="cuadruple">
+          <div class="room-img" style="background-image:url('img/DSC_0109.jpg')">
+            <span class="room-tag" data-i18n="rooms.tag.groups">Grupos</span>
+          </div>
+          <div class="room-body">
+            <h3 data-i18n="rooms.r5.name">Cuádruple familiar</h3>
+            <div class="room-meta">
+              <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M16 21v-2a4 4 0 00-4-4H6a4 4 0 00-4 4v2M22 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75M9 7a4 4 0 100 8 4 4 0 000-8z"/></svg><span data-i18n="rooms.r5.m1">Hasta 4 personas</span></span>
+              <span data-i18n="rooms.r5.m2">Primer o segundo piso</span>
+              <span data-i18n="rooms.r5.m3">Agua caliente 24h</span>
+            </div>
+            <p data-i18n="rooms.r5.desc">Perfectas para viajes en familia, grupos de amigos o equipos de trabajo. Te alojarás en un ambiente tradicional dentro de la casona, con la posibilidad de elegir entre primer o segundo piso según tu preferencia.</p>
+            <div class="room-foot">
+              <div class="room-price">S/. 320 <small data-i18n="rooms.night">/ noche</small></div>
+              <a class="room-link reservar-btn" data-room-key="r5">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.4-1.4c1.4.7 2.9 1.1 4.6 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>
+                <span data-i18n="rooms.book">Reservar</span>
+              </a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="servicios" id="servicios">
+    <div class="container">
+      <div class="section-head reveal">
+        <div class="eyebrow" data-i18n="srv.eyebrow">Servicios</div>
+        <h2 data-i18n="srv.h2">Lo que la casona ofrece</h2>
+        <div class="ornament"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="3"/></svg></div>
+      </div>
+
+      <div class="servicios-grid reveal">
+        <div class="srv">
+          <div class="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div>
+          <h4 data-i18n="srv.s1.t">Recepción 24 h</h4>
+          <p data-i18n="srv.s1.d">Te esperamos a cualquier hora.</p>
+        </div>
+        <div class="srv">
+          <div class="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12.55a11 11 0 0114 0M1.42 9a16 16 0 0121.16 0M8.53 16.11a6 6 0 016.95 0M12 20h.01"/></svg></div>
+          <h4 data-i18n="srv.s2.t">Wi-Fi gratis</h4>
+          <p data-i18n="srv.s2.d">Conexión incluida en la tarifa.</p>
+        </div>
+        <div class="srv">
+          <div class="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><path d="M3.27 6.96L12 12.01l8.73-5.05M12 22.08V12"/></svg></div>
+          <h4 data-i18n="srv.s3.t">Traslados</h4>
+          <p data-i18n="srv.s3.d">Aeropuerto y terminal de bus.</p>
+        </div>
+        <div class="srv">
+          <div class="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><path d="M9 22V12h6v10"/></svg></div>
+          <h4 data-i18n="srv.s4.t">Casona histórica</h4>
+          <p data-i18n="srv.s4.d">Arquitectura colonial de 1810.</p>
+        </div>
+        <div class="srv">
+          <div class="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2v6m0 8v6M2 12h6m8 0h6"/><circle cx="12" cy="12" r="3"/></svg></div>
+          <h4 data-i18n="srv.s5.t">Calefacción</h4>
+          <p data-i18n="srv.s5.d">Confort las noches de Arequipa.</p>
+        </div>
+        <div class="srv">
+          <div class="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2l3 6 5-4-2 9 7 1-9 6 2-9-6-2 2-4-2-3z"/></svg></div>
+          <h4 data-i18n="srv.s6.t">Tours Arequipa</h4>
+          <p data-i18n="srv.s6.d">Cañón del Colca y city tours.</p>
+        </div>
+        <div class="srv">
+          <div class="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 22h18M5 22V12l7-4 7 4v10M9 22V14m6 8v-8"/></svg></div>
+          <h4 data-i18n="srv.s7.t">Terraza & bar</h4>
+          <p data-i18n="srv.s7.d">Cena, copa y vista de volcanes.</p>
+        </div>
+        <div class="srv">
+          <div class="srv-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 6h18M3 12h18M3 18h12"/></svg></div>
+          <h4 data-i18n="srv.s8.t">Lavandería</h4>
+          <p data-i18n="srv.s8.d">Servicio de lavado y planchado.</p>
+        </div>
+      </div>
+
+      <div class="idiomas reveal">
+        <div class="label" data-i18n="srv.lang.label">Atendemos en</div>
+        <div class="langs" data-i18n="srv.lang.list" data-i18n-html="true">
+          <span>Español</span><span>Inglés</span><span>Francés</span><span>Italiano</span><span>Alemán</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERIENCIA -->
+  <section class="experiencia">
+    <div class="container">
+      <div class="reveal">
+        <div class="eyebrow" data-i18n="exp.eyebrow">Vista privilegiada</div>
+        <h2 data-i18n="exp.h2" data-i18n-html="true">Tres volcanes como <em>compañía</em> diaria</h2>
+        <div class="ornament" style="justify-content:center"><svg viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="3"/></svg></div>
+        <p data-i18n="exp.p">Desde la casona y la terraza se aprecian los tres volcanes tutelares de Arequipa. Una ciudad construida en sillar blanco, con la piedra del volcán y el cielo del altiplano como techo.</p>
+      </div>
+      <div class="vol-grid">
+        <div class="vol reveal">
+          <h3 data-i18n="exp.v1.h" data-i18n-html="true">Misti <em>5,822 m</em></h3>
+          <div class="h" data-i18n="exp.v1.s">El guardián</div>
+          <p data-i18n="exp.v1.d">Cono perfecto, símbolo de la ciudad.</p>
+        </div>
+        <div class="vol reveal">
+          <h3 data-i18n="exp.v2.h" data-i18n-html="true">Chachani <em>6,057 m</em></h3>
+          <div class="h" data-i18n="exp.v2.s">El más alto</div>
+          <p data-i18n="exp.v2.d">Ascensión técnica accesible, una de las más fáciles sobre 6,000 m.</p>
+        </div>
+        <div class="vol reveal">
+          <h3 data-i18n="exp.v3.h" data-i18n-html="true">Pichu-Pichu <em>5,664 m</em></h3>
+          <div class="h" data-i18n="exp.v3.s">El de las cumbres</div>
+          <p data-i18n="exp.v3.d">Cinco cumbres, sitio sagrado preincaico.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERÍA -->
+  <section class="gallery">
+    <div class="container">
+      <div class="section-head reveal" style="margin-bottom:50px">
+        <div class="eyebrow" data-i18n="gal.eyebrow">Galería</div>
+        <h2 data-i18n="gal.h2">La casona en imágenes</h2>
+      </div>
+      <div class="gallery-grid reveal">
+        <div class="g big" style="background-image:url('img/DSC_0086.jpg')"></div>
+        <div class="g" style="background-image:url('img/DSC_0040.jpg')"></div>
+        <div class="g" style="background-image:url('img/DSC_0026.jpg')"></div>
+        <div class="g" style="background-image:url('img/DSC_0084.jpg')"></div>
+        <div class="g" style="background-image:url('img/DSC_0124.jpg')"></div>
+        <div class="g big" style="background-image:url('img/DSC_0057.jpg')"></div>
+        <div class="g" style="background-image:url('img/DSC_0030.jpg')"></div>
+        <div class="g" style="background-image:url('img/DSC_0089.jpg')"></div>
+        <div class="g" style="background-image:url('img/DSC_0091.jpg')"></div>
+        <div class="g" style="background-image:url('img/DSC_0061.jpg')"></div>
+        <div class="g" style="background-image:url('img/DSC_0126.jpg')"></div>
+        <div class="g" style="background-image:url('img/DSC_0137.jpg')"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RESERVAR CTA -->
+  <section class="cta" id="reservar">
+    <div class="container reveal">
+      <div class="eyebrow" data-i18n="cta.eyebrow">Reservar</div>
+      <h2 data-i18n="cta.h2" data-i18n-html="true">Reserva tu estancia en <em>la casona</em></h2>
+      <p data-i18n="cta.p">Mejor precio garantizado al reservar directamente con nosotros. También puedes encontrarnos en las principales plataformas.</p>
+      <div class="cta-actions">
+        <a class="btn btn-wa reservar-btn" data-room-key="general">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.4-1.4c1.4.7 2.9 1.1 4.6 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>
+          <span data-i18n="cta.btn1">Reservar por WhatsApp</span>
+        </a>
+        <a href="mailto:nuespana@gmail.com" class="btn btn-ghost" data-i18n="cta.btn2">Reservar por email</a>
+      </div>
+      <div class="cta-partners">
+        <span>Booking.com</span><span style="opacity:.4">·</span>
+        <span>Tripadvisor</span><span style="opacity:.4">·</span>
+        <span>Trivago</span><span style="opacity:.4">·</span>
+        <span>Expedia</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="contacto" id="ubicacion">
+    <div class="container">
+      <div class="contacto-grid">
+        <div class="reveal">
+          <div class="eyebrow" style="color:var(--ochre)" data-i18n="con.eyebrow">Contacto</div>
+          <h2 data-i18n="con.h2" data-i18n-html="true">Te esperamos en <em>Yanahuara</em></h2>
+          <p data-i18n="con.p">El barrio tradicional al margen izquierdo del río Chili. Te recomendamos venir caminando desde la Plaza de Armas — son 10 minutos por calles de sillar.</p>
+
+          <div class="contact-block">
+            <div class="lbl" data-i18n="con.address">Dirección</div>
+            <div class="val">Calle Antiquilla 106<br/>Yanahuara · Arequipa · Perú</div>
+          </div>
+          <div class="contact-block">
+            <div class="lbl" data-i18n="con.phone">Teléfono</div>
+            <div class="val">
+              <a href="tel:+5154718562">+51 (54) 71 8562</a>
+              <a href="tel:+51958347809">+51 958 347 809</a>
+              <a href="tel:+51993404899">+51 993 404 899</a>
+            </div>
+          </div>
+          <div class="contact-block">
+            <div class="lbl">Email</div>
+            <div class="val">
+              <a href="mailto:nuespana@gmail.com">nuespana@gmail.com</a>
+              <a href="mailto:nueva_espagna@yahoo.com">nueva_espagna@yahoo.com</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="map-frame reveal">
+          <iframe loading="lazy" src="https://www.google.com/maps?q=Calle+Antiquilla+106,+Yanahuara,+Arequipa,+Peru&output=embed"></iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div data-i18n="footer.copy">© 2026 Posada Nueva España · Arequipa, Perú · Una casona desde 1810</div>
+      <div class="social">
+        <a href="https://www.facebook.com/profile.php?id=100009586083906" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M9.198 21.5h4v-8.01h3.604l.396-3.98h-4V7.5a1 1 0 011-1h3v-4h-3a5 5 0 00-5 5v2.01h-2l-.396 3.98h2.396v8.01z"/></svg>
+        </a>
+        <a href="#" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".5" fill="currentColor"/></svg>
+        </a>
+        <a href="mailto:nuespana@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp -->
+  <a class="wa-float reservar-btn" data-room-key="general" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.8.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6.1-.1.3-.3.4-.5.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5 0-.1-.7-1.7-.9-2.3-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.4 0 1.4 1 2.8 1.2 3 .1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.4.2-.7.2-1.2.2-1.4-.1-.1-.3-.2-.6-.3M12 2C6.5 2 2 6.5 2 12c0 1.7.4 3.3 1.2 4.7L2 22l5.4-1.4c1.4.7 2.9 1.1 4.6 1.1 5.5 0 10-4.5 10-10S17.5 2 12 2"/></svg>
+  </a>
+
+  <script>
+    /* ===== TRANSLATIONS ===== */
+    const I18N = {
+      es: {
+        "meta.title":"Posada Nueva España · Arequipa · Casona Colonial 1810",
+        "meta.desc":"Una casona de 1810 en el tradicional barrio de Yanahuara, Arequipa. Habitaciones coloniales y modernas, a 10 minutos de la Plaza de Armas.",
+        "brand.sub":"Arequipa · Desde 1810",
+        "nav.casona":"La Casona","nav.historia":"Historia","nav.habitaciones":"Habitaciones",
+        "nav.servicios":"Servicios","nav.ubicacion":"Ubicación","nav.reservar":"Reservar",
+
+        "hero.eyebrow":"Casona Colonial · Yanahuara",
+        "hero.h1":"Donde la <em>historia</em><br/>habita en cada piedra",
+        "hero.p":"Una casona de 1810 restaurada con alma, en el barrio más auténtico de Arequipa, frente a los volcanes Misti, Chachani y Pichu-Pichu.",
+        "hero.cta1":"Reservar estancia","hero.cta2":"Descubrir la casona","hero.scroll":"Descubre",
+
+        "welcome.eyebrow":"Bienvenidos",
+        "welcome.h2":"Una casa de 1810, una <em>experiencia</em> que no termina.",
+        "welcome.p1":"Posada Nueva España está ubicada en el tradicional barrio de Yanahuara, a la margen izquierda del río Chili. Calles angostas, fachadas de sillar y macetas que adornan cada esquina componen el paisaje que rodea nuestra casona.",
+        "welcome.p2":"Construida en 1810, conserva su arquitectura colonial original, con habitaciones auténticas de la época junto a otras intervenidas con confort contemporáneo. Estamos a 10 minutos a pie de la Plaza de Armas — el trayecto se hace acompañado por la silueta de tres volcanes.",
+        "welcome.stat1":"Año de fundación","welcome.stat2":"Habitaciones","welcome.stat3":"A la Plaza de Armas",
+
+        "hist.eyebrow":"Nuestra Historia","hist.h2":"Dos siglos de vida arequipeña",
+        "hist.p":"De casa de campo a tambo, de tambo a hogar para viajeros del mundo. La casona ha cambiado de oficio, pero nunca de carácter.",
+        "hist.era1":"Siglo XIX","hist.title1":"Casa de campo",
+        "hist.text1":"Sobre el camino de herradura hacia Puno y el Colca, la casona era una propiedad con huerta y chacras, parada obligatoria de quienes cruzaban la región.",
+        "hist.era2":"Fines del Siglo XIX","hist.title2":"Tambo de lana",
+        "hist.text2":"Aquí descansaban llamas y alpacas que traían lana desde el Valle del Colca y Puno para su selección y venta — un cruce de caminos y oficios.",
+        "hist.era3":"Siglo XX–XXI","hist.title3":"Posada restaurada",
+        "hist.text3":"En los años 90 se recupera la casona y se pone en valor su arquitectura tradicional. Hoy acoge viajeros que buscan la Arequipa auténtica.",
+
+        "rooms.eyebrow":"Habitaciones",
+        "rooms.h2":"Coloniales o modernas — <em style=\"font-style:italic;color:var(--terracotta)\">tú eliges</em>",
+        "rooms.p":"Veinte habitaciones distribuidas en una casona de dos plantas. Algunas conservan los muros de sillar originales, otras combinan piedra antigua con líneas contemporáneas.",
+        "rooms.night":"/ noche","rooms.book":"Reservar",
+        "rooms.tag.popular":"Más solicitada","rooms.tag.colonial":"Colonial",
+        "rooms.tag.double":"Doble","rooms.tag.family":"Familia","rooms.tag.groups":"Grupos",
+        "rooms.r1.name":"Matrimonial con balcón","rooms.r1.m1":"1 cama queen","rooms.r1.m2":"Balcón / terraza",
+        "rooms.r1.desc":"Habitación con una cama, perfecta para parejas que buscan sentirse como en casa. Disponible con terraza o balcón sobre las calles empedradas de Antiquilla. Baño privado y agua caliente 24 horas.",
+        "rooms.r2.name":"Habitación simple","rooms.r2.m1":"1 cama","rooms.r2.m2":"Baño privado",
+        "rooms.r2.desc":"Tranquila, perfecta para descansar. Ambiente colonial con TV cable, agua caliente 24h y conexión inalámbrica.",
+        "rooms.r3.name":"Doble · twin","rooms.r3.m1":"2 camas","rooms.r3.m2":"Baño amplio","rooms.r3.m3":"TV cable",
+        "rooms.r3.desc":"Ideal para descanso por trabajo o placer. Disponible en versión colonial o moderna, según tu preferencia.",
+        "rooms.r4.name":"Triple con balcón","rooms.r4.m1":"3 camas","rooms.r4.m2":"Balcón","rooms.r4.m3":"Vista al barrio",
+        "rooms.r4.desc":"Para amigos o familia. Balcón sobre una calle del barrio de Antiquilla, ofreciendo una vista diferente y entrañable de la casona.",
+        "rooms.r5.name":"Cuádruple familiar","rooms.r5.m1":"Hasta 4 personas","rooms.r5.m2":"Primer o segundo piso","rooms.r5.m3":"Agua caliente 24h",
+        "rooms.r5.desc":"Perfectas para viajes en familia, grupos de amigos o equipos de trabajo. Te alojarás en un ambiente tradicional dentro de la casona, con la posibilidad de elegir entre primer o segundo piso según tu preferencia.",
+
+        "srv.eyebrow":"Servicios","srv.h2":"Lo que la casona ofrece",
+        "srv.s1.t":"Recepción 24 h","srv.s1.d":"Te esperamos a cualquier hora.",
+        "srv.s2.t":"Wi-Fi gratis","srv.s2.d":"Conexión incluida en la tarifa.",
+        "srv.s3.t":"Traslados","srv.s3.d":"Aeropuerto y terminal de bus.",
+        "srv.s4.t":"Casona histórica","srv.s4.d":"Arquitectura colonial de 1810.",
+        "srv.s5.t":"Calefacción","srv.s5.d":"Confort las noches de Arequipa.",
+        "srv.s6.t":"Tours Arequipa","srv.s6.d":"Cañón del Colca y city tours.",
+        "srv.s7.t":"Terraza & bar","srv.s7.d":"Cena, copa y vista de volcanes.",
+        "srv.s8.t":"Lavandería","srv.s8.d":"Servicio de lavado y planchado.",
+        "srv.lang.label":"Atendemos en",
+        "srv.lang.list":"<span>Español</span><span>Inglés</span><span>Francés</span><span>Italiano</span><span>Alemán</span>",
+
+        "exp.eyebrow":"Vista privilegiada",
+        "exp.h2":"Tres volcanes como <em>compañía</em> diaria",
+        "exp.p":"Desde la casona y la terraza se aprecian los tres volcanes tutelares de Arequipa. Una ciudad construida en sillar blanco, con la piedra del volcán y el cielo del altiplano como techo.",
+        "exp.v1.h":"Misti <em>5,822 m</em>","exp.v1.s":"El guardián","exp.v1.d":"Cono perfecto, símbolo de la ciudad.",
+        "exp.v2.h":"Chachani <em>6,057 m</em>","exp.v2.s":"El más alto","exp.v2.d":"Ascensión técnica accesible, una de las más fáciles sobre 6,000 m.",
+        "exp.v3.h":"Pichu-Pichu <em>5,664 m</em>","exp.v3.s":"El de las cumbres","exp.v3.d":"Cinco cumbres, sitio sagrado preincaico.",
+
+        "gal.eyebrow":"Galería","gal.h2":"La casona en imágenes",
+
+        "cta.eyebrow":"Reservar","cta.h2":"Reserva tu estancia en <em>la casona</em>",
+        "cta.p":"Mejor precio garantizado al reservar directamente con nosotros. También puedes encontrarnos en las principales plataformas.",
+        "cta.btn1":"Reservar por WhatsApp","cta.btn2":"Reservar por email",
+
+        "con.eyebrow":"Contacto","con.h2":"Te esperamos en <em>Yanahuara</em>",
+        "con.p":"El barrio tradicional al margen izquierdo del río Chili. Te recomendamos venir caminando desde la Plaza de Armas — son 10 minutos por calles de sillar.",
+        "con.address":"Dirección","con.phone":"Teléfono",
+
+        "footer.copy":"© 2026 Posada Nueva España · Arequipa, Perú · Una casona desde 1810",
+
+        /* WhatsApp messages */
+        "wa.r1":"Hola, me gustaría reservar la habitación *Matrimonial con balcón*. ¿Podrían confirmarme disponibilidad y precios?",
+        "wa.r2":"Hola, me gustaría reservar una *Habitación Simple*. ¿Podrían confirmarme disponibilidad y precios?",
+        "wa.r3":"Hola, me gustaría reservar la habitación *Doble Twin*. ¿Podrían confirmarme disponibilidad y precios?",
+        "wa.r4":"Hola, me gustaría reservar la habitación *Triple con balcón*. ¿Podrían confirmarme disponibilidad y precios?",
+        "wa.r5":"Hola, me gustaría reservar la habitación *Cuádruple familiar*. ¿Podrían confirmarme disponibilidad y precios?",
+        "wa.general":"Hola, me gustaría hacer una reserva en Posada Nueva España. ¿Podrían darme más información?"
+      },
+
+      en: {
+        "meta.title":"Posada Nueva España · Arequipa · Colonial House 1810",
+        "meta.desc":"An 1810 colonial house in the traditional Yanahuara district of Arequipa. Colonial and modern rooms, 10 minutes from the Plaza de Armas.",
+        "brand.sub":"Arequipa · Since 1810",
+        "nav.casona":"The House","nav.historia":"History","nav.habitaciones":"Rooms",
+        "nav.servicios":"Services","nav.ubicacion":"Location","nav.reservar":"Book",
+
+        "hero.eyebrow":"Colonial House · Yanahuara",
+        "hero.h1":"Where <em>history</em><br/>lives in every stone",
+        "hero.p":"An 1810 colonial home, restored with soul, in the most authentic district of Arequipa — facing the Misti, Chachani and Pichu-Pichu volcanoes.",
+        "hero.cta1":"Book your stay","hero.cta2":"Discover the house","hero.scroll":"Scroll",
+
+        "welcome.eyebrow":"Welcome",
+        "welcome.h2":"A house from 1810 — an <em>experience</em> that lingers.",
+        "welcome.p1":"Posada Nueva España sits in the traditional Yanahuara district, on the left bank of the Chili river. Narrow streets, sillar-stone facades and potted flowers frame our house at every corner.",
+        "welcome.p2":"Built in 1810, it preserves its original colonial architecture, with period rooms alongside others refurbished with contemporary comfort. We're a 10-minute walk from the Plaza de Armas — the silhouette of three volcanoes accompanies you on the way.",
+        "welcome.stat1":"Year founded","welcome.stat2":"Rooms","welcome.stat3":"To the Plaza de Armas",
+
+        "hist.eyebrow":"Our History","hist.h2":"Two centuries of Arequipa life",
+        "hist.p":"From country house to tambo, from tambo to home for travellers from around the world. The house has changed trades but never its character.",
+        "hist.era1":"19th Century","hist.title1":"Country house",
+        "hist.text1":"On the bridle path to Puno and Colca, the house had orchards and fields — a required stop for those crossing the region.",
+        "hist.era2":"Late 19th C.","hist.title2":"Wool tambo",
+        "hist.text2":"Llamas and alpacas rested here, carrying wool from the Colca Valley and Puno to be sorted and sold — a crossroads of trades.",
+        "hist.era3":"20th–21st C.","hist.title3":"Restored inn",
+        "hist.text3":"In the 1990s the house was recovered and its traditional architecture restored. Today it welcomes travellers seeking the authentic Arequipa.",
+
+        "rooms.eyebrow":"Rooms",
+        "rooms.h2":"Colonial or modern — <em style=\"font-style:italic;color:var(--terracotta)\">you choose</em>",
+        "rooms.p":"Twenty rooms across a two-storey house. Some preserve the original sillar-stone walls, others blend ancient stone with contemporary lines.",
+        "rooms.night":"/ night","rooms.book":"Book",
+        "rooms.tag.popular":"Most popular","rooms.tag.colonial":"Colonial",
+        "rooms.tag.double":"Double","rooms.tag.family":"Family","rooms.tag.groups":"Groups",
+        "rooms.r1.name":"Matrimonial with balcony","rooms.r1.m1":"1 queen bed","rooms.r1.m2":"Balcony / terrace",
+        "rooms.r1.desc":"A room with one bed, perfect for couples who want to feel at home. Available with terrace or balcony over Antiquilla's cobbled streets. Private bathroom and 24-hour hot water.",
+        "rooms.r2.name":"Single room","rooms.r2.m1":"1 bed","rooms.r2.m2":"Private bath",
+        "rooms.r2.desc":"Quiet and perfect for rest. Colonial atmosphere with cable TV, 24h hot water and wireless connection.",
+        "rooms.r3.name":"Double · twin","rooms.r3.m1":"2 beds","rooms.r3.m2":"Spacious bathroom","rooms.r3.m3":"Cable TV",
+        "rooms.r3.desc":"Ideal for rest, business or pleasure. Available in colonial or modern style, as you prefer.",
+        "rooms.r4.name":"Triple with balcony","rooms.r4.m1":"3 beds","rooms.r4.m2":"Balcony","rooms.r4.m3":"District view",
+        "rooms.r4.desc":"For friends or family. Balcony onto an Antiquilla street, offering a different and intimate view of the house.",
+        "rooms.r5.name":"Family quadruple","rooms.r5.m1":"Up to 4 people","rooms.r5.m2":"First or second floor","rooms.r5.m3":"24h hot water",
+        "rooms.r5.desc":"Perfect for family trips, groups of friends or work teams. You'll stay in a traditional setting inside the house, with the option to choose first or second floor.",
+
+        "srv.eyebrow":"Services","srv.h2":"What the house offers",
+        "srv.s1.t":"24h Reception","srv.s1.d":"We're here at any hour.",
+        "srv.s2.t":"Free Wi-Fi","srv.s2.d":"Included in your rate.",
+        "srv.s3.t":"Transfers","srv.s3.d":"Airport and bus terminal.",
+        "srv.s4.t":"Historic house","srv.s4.d":"1810 colonial architecture.",
+        "srv.s5.t":"Heating","srv.s5.d":"Comfortable Arequipa nights.",
+        "srv.s6.t":"Arequipa tours","srv.s6.d":"Colca Canyon and city tours.",
+        "srv.s7.t":"Terrace & bar","srv.s7.d":"Dinner, a drink and volcano views.",
+        "srv.s8.t":"Laundry","srv.s8.d":"Washing and ironing service.",
+        "srv.lang.label":"We speak",
+        "srv.lang.list":"<span>Spanish</span><span>English</span><span>French</span><span>Italian</span><span>German</span>",
+
+        "exp.eyebrow":"A privileged view",
+        "exp.h2":"Three volcanoes as <em>daily</em> company",
+        "exp.p":"From the house and rooftop terrace you'll see Arequipa's three guardian volcanoes. A city built in white sillar, with volcano stone and Andean sky as its ceiling.",
+        "exp.v1.h":"Misti <em>5,822 m</em>","exp.v1.s":"The guardian","exp.v1.d":"Perfect cone, symbol of the city.",
+        "exp.v2.h":"Chachani <em>6,057 m</em>","exp.v2.s":"The tallest","exp.v2.d":"Technically accessible — one of the easiest 6,000 m climbs.",
+        "exp.v3.h":"Pichu-Pichu <em>5,664 m</em>","exp.v3.s":"Of the summits","exp.v3.d":"Five peaks, pre-Inca sacred site.",
+
+        "gal.eyebrow":"Gallery","gal.h2":"The house in pictures",
+
+        "cta.eyebrow":"Book","cta.h2":"Reserve your stay at <em>the house</em>",
+        "cta.p":"Best price guaranteed when booking directly with us. You can also find us on major platforms.",
+        "cta.btn1":"Book via WhatsApp","cta.btn2":"Book via email",
+
+        "con.eyebrow":"Contact","con.h2":"See you in <em>Yanahuara</em>",
+        "con.p":"The traditional district on the left bank of the Chili river. We recommend walking from the Plaza de Armas — 10 minutes through sillar-stone streets.",
+        "con.address":"Address","con.phone":"Phone",
+
+        "footer.copy":"© 2026 Posada Nueva España · Arequipa, Peru · A house since 1810",
+
+        "wa.r1":"Hello, I'd like to book the *Matrimonial room with balcony*. Could you confirm availability and rates?",
+        "wa.r2":"Hello, I'd like to book a *Single room*. Could you confirm availability and rates?",
+        "wa.r3":"Hello, I'd like to book the *Double Twin room*. Could you confirm availability and rates?",
+        "wa.r4":"Hello, I'd like to book the *Triple room with balcony*. Could you confirm availability and rates?",
+        "wa.r5":"Hello, I'd like to book the *Family quadruple room*. Could you confirm availability and rates?",
+        "wa.general":"Hello, I'd like to make a reservation at Posada Nueva España. Could you give me more information?"
+      },
+
+      fr: {
+        "meta.title":"Posada Nueva España · Arequipa · Maison coloniale 1810",
+        "meta.desc":"Une maison coloniale de 1810 dans le quartier traditionnel de Yanahuara, à Arequipa. Chambres coloniales et modernes, à 10 minutes de la Plaza de Armas.",
+        "brand.sub":"Arequipa · Depuis 1810",
+        "nav.casona":"La Maison","nav.historia":"Histoire","nav.habitaciones":"Chambres",
+        "nav.servicios":"Services","nav.ubicacion":"Adresse","nav.reservar":"Réserver",
+
+        "hero.eyebrow":"Maison coloniale · Yanahuara",
+        "hero.h1":"Où l'<em>histoire</em><br/>habite chaque pierre",
+        "hero.p":"Une demeure de 1810 restaurée avec âme, dans le quartier le plus authentique d'Arequipa, face aux volcans Misti, Chachani et Pichu-Pichu.",
+        "hero.cta1":"Réserver","hero.cta2":"Découvrir la maison","hero.scroll":"Découvrir",
+
+        "welcome.eyebrow":"Bienvenue",
+        "welcome.h2":"Une maison de 1810, une <em>expérience</em> qui demeure.",
+        "welcome.p1":"Posada Nueva España se trouve dans le quartier traditionnel de Yanahuara, sur la rive gauche du Chili. Ruelles étroites, façades de sillar et pots de fleurs composent le paysage qui entoure notre demeure.",
+        "welcome.p2":"Construite en 1810, elle conserve son architecture coloniale d'origine, avec des chambres d'époque et d'autres réaménagées avec un confort contemporain. Nous sommes à 10 minutes à pied de la Plaza de Armas — accompagnés en chemin par la silhouette de trois volcans.",
+        "welcome.stat1":"Année de fondation","welcome.stat2":"Chambres","welcome.stat3":"À la Plaza de Armas",
+
+        "hist.eyebrow":"Notre Histoire","hist.h2":"Deux siècles de vie arequipénienne",
+        "hist.p":"De maison de campagne à tambo, de tambo à foyer pour voyageurs du monde entier. La maison a changé de métier, jamais de caractère.",
+        "hist.era1":"XIXe siècle","hist.title1":"Maison de campagne",
+        "hist.text1":"Sur le chemin muletier menant à Puno et au Colca, la maison était une propriété avec verger et champs — étape obligée pour qui traversait la région.",
+        "hist.era2":"Fin XIXe","hist.title2":"Tambo à laine",
+        "hist.text2":"Ici se reposaient lamas et alpagas qui apportaient la laine de la vallée du Colca et de Puno pour être triée et vendue — un carrefour de métiers.",
+        "hist.era3":"XXe–XXIe","hist.title3":"Auberge restaurée",
+        "hist.text3":"Dans les années 90, la maison est récupérée et son architecture traditionnelle restaurée. Elle accueille aujourd'hui les voyageurs en quête de l'Arequipa authentique.",
+
+        "rooms.eyebrow":"Chambres",
+        "rooms.h2":"Coloniales ou modernes — <em style=\"font-style:italic;color:var(--terracotta)\">vous choisissez</em>",
+        "rooms.p":"Vingt chambres réparties sur deux étages. Certaines conservent les murs de sillar d'origine, d'autres marient la pierre ancienne aux lignes contemporaines.",
+        "rooms.night":"/ nuit","rooms.book":"Réserver",
+        "rooms.tag.popular":"La plus demandée","rooms.tag.colonial":"Coloniale",
+        "rooms.tag.double":"Double","rooms.tag.family":"Famille","rooms.tag.groups":"Groupes",
+        "rooms.r1.name":"Chambre matrimoniale avec balcon","rooms.r1.m1":"1 lit queen","rooms.r1.m2":"Balcon / terrasse",
+        "rooms.r1.desc":"Chambre à un lit, parfaite pour les couples qui souhaitent se sentir chez eux. Disponible avec terrasse ou balcon sur les ruelles pavées d'Antiquilla. Salle de bain privative et eau chaude 24h/24.",
+        "rooms.r2.name":"Chambre simple","rooms.r2.m1":"1 lit","rooms.r2.m2":"Salle de bain privée",
+        "rooms.r2.desc":"Calme et parfaite pour le repos. Ambiance coloniale avec TV câblée, eau chaude 24h/24 et Wi-Fi.",
+        "rooms.r3.name":"Double · twin","rooms.r3.m1":"2 lits","rooms.r3.m2":"Salle de bain spacieuse","rooms.r3.m3":"TV câblée",
+        "rooms.r3.desc":"Idéale pour le repos, le travail ou le plaisir. Disponible en version coloniale ou moderne selon votre préférence.",
+        "rooms.r4.name":"Triple avec balcon","rooms.r4.m1":"3 lits","rooms.r4.m2":"Balcon","rooms.r4.m3":"Vue sur le quartier",
+        "rooms.r4.desc":"Pour les amis ou la famille. Balcon sur une ruelle d'Antiquilla, offrant une vue différente et chaleureuse de la maison.",
+        "rooms.r5.name":"Quadruple familiale","rooms.r5.m1":"Jusqu'à 4 personnes","rooms.r5.m2":"1er ou 2e étage","rooms.r5.m3":"Eau chaude 24h/24",
+        "rooms.r5.desc":"Parfaite pour les voyages en famille, entre amis ou en équipe. Vous logerez dans un cadre traditionnel, avec le choix entre premier ou deuxième étage.",
+
+        "srv.eyebrow":"Services","srv.h2":"Ce que la maison propose",
+        "srv.s1.t":"Réception 24h","srv.s1.d":"Nous vous attendons à toute heure.",
+        "srv.s2.t":"Wi-Fi gratuit","srv.s2.d":"Inclus dans le tarif.",
+        "srv.s3.t":"Transferts","srv.s3.d":"Aéroport et gare routière.",
+        "srv.s4.t":"Maison historique","srv.s4.d":"Architecture coloniale de 1810.",
+        "srv.s5.t":"Chauffage","srv.s5.d":"Confort pour les nuits d'Arequipa.",
+        "srv.s6.t":"Tours Arequipa","srv.s6.d":"Canyon du Colca et city tours.",
+        "srv.s7.t":"Terrasse & bar","srv.s7.d":"Dîner, verre et vue des volcans.",
+        "srv.s8.t":"Blanchisserie","srv.s8.d":"Lavage et repassage.",
+        "srv.lang.label":"Nous parlons",
+        "srv.lang.list":"<span>Espagnol</span><span>Anglais</span><span>Français</span><span>Italien</span><span>Allemand</span>",
+
+        "exp.eyebrow":"Vue privilégiée",
+        "exp.h2":"Trois volcans comme <em>compagnie</em> quotidienne",
+        "exp.p":"Depuis la maison et la terrasse, on aperçoit les trois volcans tutélaires d'Arequipa. Une ville bâtie en sillar blanc, avec la pierre du volcan et le ciel andin pour toit.",
+        "exp.v1.h":"Misti <em>5 822 m</em>","exp.v1.s":"Le gardien","exp.v1.d":"Cône parfait, symbole de la ville.",
+        "exp.v2.h":"Chachani <em>6 057 m</em>","exp.v2.s":"Le plus haut","exp.v2.d":"Ascension technique accessible — l'une des plus simples au-delà de 6 000 m.",
+        "exp.v3.h":"Pichu-Pichu <em>5 664 m</em>","exp.v3.s":"Aux cinq sommets","exp.v3.d":"Cinq cimes, site sacré préinca.",
+
+        "gal.eyebrow":"Galerie","gal.h2":"La maison en images",
+
+        "cta.eyebrow":"Réserver","cta.h2":"Réservez votre séjour dans <em>la maison</em>",
+        "cta.p":"Meilleur prix garanti en réservant directement chez nous. Vous nous trouverez aussi sur les principales plateformes.",
+        "cta.btn1":"Réserver via WhatsApp","cta.btn2":"Réserver par email",
+
+        "con.eyebrow":"Contact","con.h2":"À bientôt à <em>Yanahuara</em>",
+        "con.p":"Le quartier traditionnel sur la rive gauche du Chili. Nous vous recommandons de venir à pied depuis la Plaza de Armas — 10 minutes par les ruelles de sillar.",
+        "con.address":"Adresse","con.phone":"Téléphone",
+
+        "footer.copy":"© 2026 Posada Nueva España · Arequipa, Pérou · Une maison depuis 1810",
+
+        "wa.r1":"Bonjour, j'aimerais réserver la chambre *Matrimoniale avec balcon*. Pourriez-vous me confirmer la disponibilité et les tarifs ?",
+        "wa.r2":"Bonjour, j'aimerais réserver une *Chambre Simple*. Pourriez-vous me confirmer la disponibilité et les tarifs ?",
+        "wa.r3":"Bonjour, j'aimerais réserver la chambre *Double Twin*. Pourriez-vous me confirmer la disponibilité et les tarifs ?",
+        "wa.r4":"Bonjour, j'aimerais réserver la chambre *Triple avec balcon*. Pourriez-vous me confirmer la disponibilité et les tarifs ?",
+        "wa.r5":"Bonjour, j'aimerais réserver la chambre *Quadruple familiale*. Pourriez-vous me confirmer la disponibilité et les tarifs ?",
+        "wa.general":"Bonjour, j'aimerais faire une réservation à Posada Nueva España. Pourriez-vous me donner plus d'informations ?"
+      }
+    };
+
+    const WA_NUMBER = "51958347809";
+
+    function buildWa(lang, key){
+      const msg = (I18N[lang] && I18N[lang]["wa."+key]) || I18N.es["wa."+key] || "";
+      return "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg);
+    }
+
+    function applyLang(lang){
+      const dict = I18N[lang] || I18N.es;
+      document.documentElement.lang = lang;
+      document.querySelectorAll("[data-i18n]").forEach(el => {
+        const key = el.getAttribute("data-i18n");
+        const val = dict[key];
+        if (val === undefined) return;
+        const attr = el.getAttribute("data-i18n-attr");
+        if (attr) {
+          el.setAttribute(attr, val);
+        } else if (el.getAttribute("data-i18n-html") === "true") {
+          el.innerHTML = val;
+        } else {
+          el.textContent = val;
+        }
+      });
+      document.querySelectorAll(".reservar-btn").forEach(btn => {
+        const key = btn.getAttribute("data-room-key") || "general";
+        btn.setAttribute("href", buildWa(lang, key));
+        btn.setAttribute("target", "_blank");
+        btn.setAttribute("rel", "noopener");
+      });
+      document.querySelectorAll("#langSwitcher button").forEach(b => {
+        b.classList.toggle("active", b.getAttribute("data-lang") === lang);
+      });
+      try { localStorage.setItem("ne_lang", lang); } catch(e){}
+    }
+
+    // Lang init
+    let initial = "es";
+    try {
+      const saved = localStorage.getItem("ne_lang");
+      if (saved && I18N[saved]) initial = saved;
+      else {
+        const nav = (navigator.language||"es").slice(0,2);
+        if (I18N[nav]) initial = nav;
+      }
+    } catch(e){}
+
+    document.getElementById("langSwitcher").addEventListener("click", e => {
+      const b = e.target.closest("button[data-lang]");
+      if (!b) return;
+      applyLang(b.getAttribute("data-lang"));
+    });
+
+    applyLang(initial);
+
+    // Loader: greet in detected language, then hide on load
+    const LOADER_GREETING = { es:"Bienvenidos", en:"Welcome", fr:"Bienvenue" };
+    document.getElementById("loaderTag").textContent = LOADER_GREETING[initial] || "Bienvenidos";
+
+    function hideLoader(){
+      const el = document.getElementById("loader");
+      if (!el || el.classList.contains("hidden")) return;
+      el.classList.add("hidden");
+      document.body.classList.remove("loading");
+      setTimeout(()=>{ el.remove(); }, 1000);
+    }
+    // Hide once page (incl. hero image) fully loaded, with a minimum display of 800ms for polish
+    const loaderStart = performance.now();
+    function maybeHide(){
+      const elapsed = performance.now() - loaderStart;
+      const wait = Math.max(0, 1000 - elapsed);
+      setTimeout(hideLoader, wait);
+    }
+    if (document.readyState === "complete") maybeHide();
+    else window.addEventListener("load", maybeHide);
+    // Safety: never hang more than 4.5s
+    setTimeout(hideLoader, 4500);
+
+    // sticky nav
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 60);
+    document.addEventListener('scroll', onScroll, {passive:true});
+    onScroll();
+
+    // reveal on scroll
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:.12});
+    document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+  </script>
+</body>
+</html>
